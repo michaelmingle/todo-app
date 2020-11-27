@@ -1,5 +1,4 @@
 function onFormSubmit(){
-    // alert("Connected");
     var formData = readFromData();
     insertNewRecord(formData);
     resetForm();
@@ -24,7 +23,7 @@ function insertNewRecord(data){
     cell3.innerHTML = data.timeline;
     cell3 = newRow.insertCell(3);
     cell3.innerHTML = `<a onClick="onEdit(this)">Edit</a>
-                       <a>Delete</a>`;
+                       <a>Del</a>`;
 }
 
 function resetForm() {
