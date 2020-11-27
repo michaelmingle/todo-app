@@ -2,15 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Todo App</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h3>To Do List</h3>
-            <p>Finish Them Quickly</p>
+        <div class="row">
+        <div class="header-top">
+            <div class="header">
+                <h3>TO DO LIST</h3>
+                <p>Finish Them Quickly</p>
+            </div>
         </div>
+        <div class="form card-body">
+            <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="on">
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" align="right">Add Title*</label>
+                    <div class="col-sm-6">
+                        <input type="text" id="title" name="title" class="form-control form-control-sm" placeholder="Enter ToDo Title" required/>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" align="right">Description*</label>
+                    <div class="col-sm-6">
+                        <input type="text" id="description" name="description" class="form-control form-control-sm" placeholder="Enter Description" required/>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" align="right">TimeLine*</label>
+                    <div class="col-sm-6">
+                        <input type="text" id="timeline" name="timeline" class="form-control form-control-sm" placeholder="Enter TimeLine" required/>
+                    </div>
+                  </div>
+                  <center style="padding:10px;">
+                    <input style="width:150px;" type="submit" value="Add" class="btn btn-success">
+                    <button style="width:150px;" id="clear" class="btn btn-primary">Clear</button>
+                    
+                </center>
+            </form>
+        </div>
+        
     </div>
+
+    <table class="table mt-3" id="todo_list">
+        <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">TimeLine</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+           
+        </tbody>
+    </table>
+      <sapn style="text-align: center; text-shadow: inherit; color: mediumvioletred;"><p>My To Dos</p></sapn>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
